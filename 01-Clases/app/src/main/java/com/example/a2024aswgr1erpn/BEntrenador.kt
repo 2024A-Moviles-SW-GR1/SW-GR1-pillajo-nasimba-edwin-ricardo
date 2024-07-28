@@ -16,7 +16,7 @@ class BEntrenador(
     }
 
     override fun toString(): String {
-        return "$nombre - ${descripcion}"
+        return "$nombre - $descripcion"
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {

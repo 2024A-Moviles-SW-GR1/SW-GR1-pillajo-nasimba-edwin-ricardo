@@ -78,7 +78,8 @@ class ESqliteHelperEntrenador(
                 SELECT * FROM ENTRENADOR WHERE ID = ?
             """.trimIndent()
         val arregloParametrosConsultaLecutra = arrayOf(id.toString())
-        val resultadoConsultaLectura = baseDeDatosLectura.rawQuery(scriptConsultaLectura,arregloParametrosConsultaLecutra)
+        val resultadoConsultaLectura = baseDeDatosLectura.rawQuery(scriptConsultaLectura,
+            arregloParametrosConsultaLecutra)
         //Logica Busqueda
         //Recibimos un arreglo (puede ser nulo)
         //Llenar el arreglo de entrenadores
@@ -87,7 +88,9 @@ class ESqliteHelperEntrenador(
         val arregloRespuesta = arrayListOf<BEntrenador>()
         if(existeAlmenosUno){
             do {
-                val entrenador = BEntrenador(resultadoConsultaLectura.getInt(0),resultadoConsultaLectura.getString(1), resultadoConsultaLectura.getString(2))
+                val entrenador = BEntrenador(resultadoConsultaLectura.getInt(0),
+                    resultadoConsultaLectura.getString(1),
+                    resultadoConsultaLectura.getString(2))
                 arregloRespuesta.add(entrenador)
             }while (resultadoConsultaLectura.moveToNext())
         }

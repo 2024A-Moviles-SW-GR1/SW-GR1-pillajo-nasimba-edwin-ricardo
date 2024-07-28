@@ -100,12 +100,23 @@ class MainActivity : AppCompatActivity() {
             callbackContenidoIntentExplicito.launch(intentExplicito)
         }
 
-        //Inicializar la base de datos
-        EBaseDeDatos.tablaEntrenador = ESqliteHelperEntrenador(this)
-        val botonSQLite = findViewById<Button>(R.id.btn_sqlite)
-        botonSQLite.setOnClickListener {
+        // Inicializar Base de Datos
+        EBaseDeDatos.tablaEntrenador = ESqliteHelperEntrenador(
+            this
+        )
+        val botonSqlite = findViewById<Button>(R.id.btn_sqlite)
+        botonSqlite.setOnClickListener {
             irActividad(ECrudEntrenador::class.java)
         }
+        val botonRView = findViewById<Button>(R.id.btn_recycler_view)
+        botonRView.setOnClickListener {
+            irActividad(FRecyclerView::class.java)
+        }
+        val BotonGMaps = findViewById<Button>(R.id.btn_google_maps)
+        BotonGMaps.setOnClickListener {
+            irActividad(GGoogleMapsActivity::class.java)
+        }
+
 
     }
 
