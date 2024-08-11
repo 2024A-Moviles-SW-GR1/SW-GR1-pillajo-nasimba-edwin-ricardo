@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#0F1419</color>
+    <color name="white">#E7E9EA</color>
+    <color name="white_button_color">#D7DBDC</color>
+    <color name="gray">#71767B</color>
+    <color name="blue_500">#1DA1F2</color> <!-- Color del botón -->
+    <color name="blue_700">#1A91DA</color> <!-- Color del borde -->
+</resources>
